@@ -1,7 +1,24 @@
 import 'package:flutter/material.dart';
 
+// 函数定义 和 参数定义
+printInteger(int a) {
+  // 显式声明
+  String cc = '123';
+  // 任意类型
+  dynamic ccc = 123;
+  ccc = '123ff';
+  // 控制台打印
+  print(a);
+  print(cc);
+  print(ccc);
+}
+
 void main() {
   runApp(const MyApp());
+  // 变量声明
+  var number = 12;
+  // 函数调用
+  printInteger(number);
 }
 
 class MyApp extends StatelessWidget {
@@ -24,7 +41,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page222'),
+      home: const MyHomePage(title: 'Flutter Demo Home Pagds'),
     );
   }
 }
@@ -51,6 +68,9 @@ class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
 
   void _incrementCounter() {
+    // 隐式声明类型  会有类型推导
+    var number = 12;
+    printInteger(number);
     setState(() {
       // This call to setState tells the Flutter framework that something has
       // changed in this State, which causes it to rerun the build method below
